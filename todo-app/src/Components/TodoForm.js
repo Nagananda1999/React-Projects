@@ -14,7 +14,7 @@ import { ADD_TODO } from "../context/action.types";
 
 const TodoForm = () => {
   const [todoString, setTodoString] = useState("");
-  const { dispatch } = useContext(TodoContext);
+  const {todos, dispatch } = useContext(TodoContext);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -30,7 +30,7 @@ const TodoForm = () => {
       type: ADD_TODO,
       payload: todo
     });
-
+    console.log(todos);
     setTodoString("");
   };
 

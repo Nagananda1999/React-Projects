@@ -6,7 +6,7 @@ import { REMOVE_TODO } from "../context/action.types";
 
 const Todos = () => {
   const { todos, dispatch } = useContext(TodoContext);
-
+  // console.log(todos);
   return (
     <ListGroup className="mt-5 mb-2 items">
       {todos.map(todo => (
